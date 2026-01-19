@@ -242,7 +242,7 @@
   }
 
   .header-container {
-    padding: 0 12px;
+    padding: 12px;
   }
 
   .logo {
@@ -319,7 +319,7 @@
   }
 
   .footer-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
