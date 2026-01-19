@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">E-commerce.</div>
+
+            <nav class="nav-menu">
+                <a href="../index.html" class="active">TRANG CHỦ</a>
+                <a href="../shop/shop.html">CỬA HÀNG</a>
+            </nav>
+
+            <div class="header-icons">
+                <a href="../cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="../wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+
+    </header>
+
+
+    <section class="container">
+
+        <aside class="filter">
+            <h2>Bộ Lọc</h2>
+            <h4>Danh mục</h4>
+            <label><input type="checkbox" name="category" value="tatca"> Tất cả</label>
+            <label><input type="checkbox" name="category" value="quanao"> Quần áo</label>
+            <label><input type="checkbox" name="category" value="phukien"> Phụ kiện</label>
+
+            <h4>Khoảng giá</h4>
+            <label><input type="radio" name="price" value="duoi200"> Dưới 200.000đ</label>
+            <label><input type="radio" name="price" value="200-500"> 200.000đ - 500.000đ</label>
+            <label><input type="radio" name="price" value="tren500"> Trên 500.000đ</label>
+            
+            <h4>Màu sắc</h4>
+            <label><input type="checkbox" name="color" value="white"> Trắng</label>
+            <label><input type="checkbox" name="color" value="black"> Đen</label>
+            <label><input type="checkbox" name="color" value="brown"> Nâu</label>
+
+        </aside>
+
+        <div class="content">
+            <div class="top">
+                <h2>Cửa hàng</h2>
+            </div>
+
+            <div class="product-grid"> </div>
+            <div class="page"></div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h2 class="footer-logo">LUXE.</h2>
+                <p>
+                    Định nghĩa lại sự sang trọng hiện đại thông qua thiết kế tối giản và tay nghề thủ công đặc biệt.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Mua sắm</h3>
+                <a href="#">Áo</a>
+                <a href="#">Quần</a>
+                <a href="#">Phụ kiện</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Trợ giúp</h3>
+                <a href="#">Giao hàng & Trả hàng</a>
+                <a href="#">Hướng dẫn chọn size</a>
+                <a href="#">Câu hỏi thường gặp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kết nối</h3>
+                <div class="social-icons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>
+                    Đăng ký nhận bản tin của chúng tôi để nhận các ưu đãi độc quyền.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 LUXE. Bảo lưu mọi quyền.</p>
+            <div>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản dịch vụ</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="shop.js"></script>
+</body>
+</html>

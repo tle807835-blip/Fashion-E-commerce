@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">E-commerce.</div>
+
+            <nav class="nav-menu">
+                <a href="../index.html" class="active">TRANG CHỦ</a>
+                <a href="../shop/shop.html">CỬA HÀNG</a>
+            </nav>
+
+            <div class="header-icons">
+                <a href="../cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="../wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+
+    </header>
+
+    <setion class="product">
+        <div class="container">
+            <div class="product__sp">
+                <div class="img">
+                    <div class="image">
+                        <img id="product-img" src="../img/A.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="product__card">
+                    <h2 id="product-title"  class="product__title"></h2>
+                    <p id="product-subtitle"  class="subtitle"></p>
+
+                    <div class="price__setion">
+                        <div id="product-price" class="price"></div>
+                        <p class="note">Giá đã bao gồm VAT. Miễn phí vận chuyển cho đơn hàng trên 150.000đ</p>
+                    </div>
+
+                    <div class="size__section">
+                        <div class="size__header">
+                            <span>Chọn size</span>
+                            <a href="#" class="size__guide" onclick="openSizeGuide()">
+                                <i class="fa-solid fa-ruler"></i> Hướng dẫn chọn size
+                            </a>
+                        </div>
+                        <div class="size__list">
+                            <button class="size">S</button>
+                            <button class="size">M</button>
+                            <button class="size">L</button>
+                            <button class="size">XL</button>
+                        </div>
+                    </div>
+
+                    <div class="color__section">
+                        <div class="color__header">
+                            <span>MÀU SẮC: <b id="selected-color-text">TRẮNG</b></span>
+                        </div>
+                    
+                        <div class="color__list">
+                            <button class="color-item active" data-color="Trắng" style="background:#fff"></button>
+                            <button class="color-item" data-color="Đen" style="background:#000"></button>
+                            <button class="color-item" data-color="Nâu" style="background:rgb(65, 29, 29)"></button>
+                        </div>
+                    </div>
+                    
+
+                    <div class="btn">
+                        <button class="add-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng </button>
+                        <button 
+                            class="add-wishlist"
+                            data-id="1"
+                            data-name="Áo thun basic"
+                            data-price="199000"
+                            data-img="../img/A.jpg">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+
+                    </div>
+                
+                    <div class="section">
+                        <h3>Tùy chọn thanh toán</h3>
+                        <ul>
+                            <li><i style="color: #00b050;" class="fa-solid fa-circle-check"></i> MoMo, ZaloPay, Chuyển khoản</li>
+                            <li><i style="color: #00b050;" class="fa-solid fa-circle-check"></i> Thanh toán khi nhận hàng (COD)</li>
+                        </ul>
+                    </div>
+                
+                    <div class="section">
+                        <h3>Thông tin giao hàng</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-truck"></i> Giao hàng nhanh 2-3 ngày (Hà Nội, TP.HCM)</li>
+                            <li><i class="fa-solid fa-rotate-left"></i> Miễn phí đổi trả trong 7 ngày</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </setion>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h2 class="footer-logo">LUXE.</h2>
+                <p>
+                    Định nghĩa lại sự sang trọng hiện đại thông qua
+                    thiết kế tối giản và tay nghề thủ công đặc biệt.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Mua sắm</h3>
+                <a href="#">Hàng mới về</a>
+                <a href="#">Áo</a>
+                <a href="#">Quần</a>
+                <a href="#">Phụ kiện</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Trợ giúp</h3>
+                <a href="#">Giao hàng & Trả hàng</a>
+                <a href="#">Hướng dẫn chọn size</a>
+                <a href="#">Câu hỏi thường gặp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kết nối</h3>
+                <div class="social-icons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>
+                    Đăng ký nhận bản tin của chúng tôi để nhận các ưu đãi độc quyền.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 LUXE. Bảo lưu mọi quyền.</p>
+            <div>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản dịch vụ</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="product.js"></script>
+</body>
+</html>

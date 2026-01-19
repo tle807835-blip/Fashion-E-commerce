@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.checkout {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.checkout-left h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.checkout-left h3 {
+    font-size: 18px;
+    margin: 25px 0 10px;
+    font-weight: 600;
+}
+
+.checkout-left input {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.checkout-left input::placeholder {
+    color: #999;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.row input {
+    flex: 1;
+}
+
+.note {
+    background: #ededeb;
+    padding: 15px;
+    font-size: 13px;
+    color: #555;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+#placeOrder {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(to right, #111, #222);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkout-right {
+    background: #eceae6;
+    padding: 25px;
+}
+
+.checkout-right h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.order-item img {
+    width: 55px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.order-item p {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.order-item b {
+    font-weight: 600;
+}
+
+.line {
+    height: 1px;
+    background: #d5d5d5;
+    margin: 20px 0;
+}
+
+.checkout-right .row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.checkout-right .row span:last-child {
+    font-weight: 500;
+}
+
+.checkout-right .total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 16px;
+    gap: 25px;
+  }
+
+  .checkout-right {
+    order: -1;
+  }
+
+  .checkout-left h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .checkout-left h3 {
+    font-size: 16px;
+    margin: 20px 0 8px;
+  }
+
+  .checkout-left input {
+    font-size: 13px;
+    padding: 12px 10px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #placeOrder {
+    font-size: 15px;
+    padding: 15px;
+  }
+}

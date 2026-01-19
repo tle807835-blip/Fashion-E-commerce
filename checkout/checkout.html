@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<main class="checkout">
+
+    <div class="checkout-left">
+        <h1>Thanh toán</h1>
+
+        <form id="checkoutForm">
+            <h3>Địa chỉ giao hàng</h3>
+            <div class="row">
+                <input type="text" id="firstName" placeholder="Tên">
+                <input type="text" id="lastName" placeholder="Họ">
+            </div>
+
+            <input type="text" id="address" placeholder="Địa chỉ">
+            <input type="text" id="city" placeholder="Thành phố">
+
+            <div class="row">
+                <input type="text" id="phone" placeholder="Số điện thoại">
+            </div>
+
+            <h3>Thanh toán</h3>
+            <p class="note">Cổng thanh toán giả lập – Nhấn "Đặt hàng" để hoàn tất.</p>
+
+            <button type="submit" id="placeOrder">Đặt hàng</button>
+        </form>
+    </div>
+
+    <div class="checkout-right">
+        <h3>Đơn hàng của bạn</h3>
+
+        <div id="orderItems"></div>
+
+        <div class="line"></div>
+
+        <div class="row">
+            <span>Tạm tính</span>
+            <span id="subtotal">0 đ</span>
+        </div>
+
+        <div class="row">
+            <span>Phí vận chuyển</span>
+            <span>Miễn phí</span>
+        </div>
+
+        <div class="row total">
+            <span>Tổng cộng</span>
+            <span id="total">0 đ</span>
+        </div>
+    </div>
+
+</main>
+
+<script src="checkout.js"></script>
+</body>
+</html>

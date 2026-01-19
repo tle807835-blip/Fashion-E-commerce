@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">E-commerce.</div>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="active">TRANG CHỦ</a>
+                <a href="../shop/shop.html">CỬA HÀNG</a>
+            </nav>
+
+            <div class="header-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                <a href="login/login.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+
+        <div class="header-search-wrapper">
+            <div class="header__search">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <div class="product__list"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1>Sự tối giản<br>Vượt thời gian.</h1>
+                <p>Những món đồ thiết yếu được nâng tầm cho cá nhân hiện đại.Khám phá bộ sưu tập streetwear cao cấp mới của chúng tôi.</p>
+                <a href="../shop/shop.html" class="hero-btn">Mua ngay</a>
+            </div>
+        </section>
+
+        <div class="new-arrivals">
+            <div class="section-header">
+                <div>
+                    <h2>Hàng mới về</h2>
+                    <p>Những bổ sung mới nhất cho bộ sưu tập của chúng tôi.</p>
+                </div>
+                <a href="shop/shop.html" class="view-all">Xem tất cả</a>
+            </div>
+      
+           <div class="product-grid" id="productGrid"></div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h2 class="footer-logo">LUXE.</h2>
+                <p>Định nghĩa lại sự sang trọng hiện đại thông qua thiết kế tối giản và tay nghề thủ công đặc biệt.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Mua sắm</h3>
+                <a href="#">Hàng mới về</a>
+                <a href="#">Áo</a>
+                <a href="#">Quần</a>
+                <a href="#">Phụ kiện</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Trợ giúp</h3>
+                <a href="#">Giao hàng & Trả hàng</a>
+                <a href="#">Hướng dẫn chọn size</a>
+                <a href="#">Câu hỏi thường gặp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kết nối</h3>
+                <div class="social-icons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>
+                    Đăng ký nhận bản tin của chúng tôi để nhận các ưu đãi độc quyền.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 LUXE. Bảo lưu mọi quyền.</p>
+            <div>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản dịch vụ</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script>
+        const products = [
+            {
+            id: 1,
+            name: "Kẹp Tóc Mori",
+            category: "phukien",
+            price: 122000,
+            color: "white",
+            img: "../img/kep.webp",
+            desc: "Mori Phong Cách Thanh Lịch Lily Của Thung Lũng Ngọc Trai Hoa Tính Khí Thời Trang Tua Rua Tóc"
+            },
+            {
+            id: 2,
+            name: "Quần Ống Rộng",
+            category: "quanao",
+            price: 650000,
+            color: "wihte",
+            img: "../img/quann.webp",
+            desc: "Quần ống rộng nam, nữ ống suông chất cotton dày dặn, quần dài ống rộng phong cách Hàn Quốc Ulzzang"
+            },
+            {
+            id: 3,
+            name: "Áo Thun Nam",
+            category: "quanao",
+            price: 133000,
+            color: "white",
+            img: "../img/aotr.webp",
+            desc: "Áo thun nam cổ chữ V ngắn tay form dáng dễ phối chất vải thun gân cao cấp ZUTEE"
+            },
+        ];
+        
+        const grid = document.getElementById("productGrid");
+        
+        products.forEach(product => {
+            const card = document.createElement("div");
+            card.className = "product-card";
+            card.dataset.id = product.id;
+        
+            card.innerHTML = `
+                <div class="product-img">
+                    <img src="${product.img}" alt="${product.name}">
+                </div>
+                <a class="quick-view">Xem Ngay</a>
+                <h3>${product.name}</h3>
+                <p class="category">${product.category}</p>
+                <p class="price">${product.price.toLocaleString("vi-VN")} ₫</p>
+            `;
+            
+            card.addEventListener("click", () => {
+                localStorage.setItem("selectedProduct", JSON.stringify({
+                    ...product,
+                    img: "../" + product.img   
+                }));
+                window.location.href = "product/product.html";
+            });
+        
+            grid.appendChild(card);
+        });
+
+    </script>
+
+    <script>
+        const searchIcon = document.querySelector(".fa-magnifying-glass");
+        const searchWrapper = document.querySelector(".header-search-wrapper");
+        const searchInput = document.querySelector(".header__search input");
+
+        searchIcon.addEventListener("click", () => {
+            searchWrapper.classList.toggle("active");
+        
+            if (searchWrapper.classList.contains("active")) {
+                setTimeout(() => searchInput.focus(), 100);
+            }
+        });
+
+        document.addEventListener("click", (e) => {
+            if (
+                !searchWrapper.contains(e.target) &&
+                !searchIcon.contains(e.target)
+            ) {
+                searchWrapper.classList.remove("active");
+            }
+        });
+
+    </script>
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+/*HEADER*/
+.header {
+    width: 100%;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+.nav-menu a.active {
+  color: #000;
+}
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icons i {
+    font-size: 16px;
+    color: #000;
+}
+
+.auth-wrapper {
+    max-width: 380px;
+    width: 100%;
+    margin: 120px auto 80px; 
+    padding: 0 16px;
+    text-align: center;
+}
+
+.auth-wrapper h1 {
+    font-size: 26px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.auth-tabs {
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 26px;
+}
+
+.auth-tabs .tab {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+}
+
+.auth-tabs .tab.active {
+    background: #000;
+    color: #fff;
+}
+
+.auth-form {
+    text-align: left;
+}
+
+.auth-form label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    border-radius: 2px;
+    outline: none;
+}
+
+.auth-form input:focus {
+    border-color: #000;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 14px;
+}
+
+.btn-primary:hover {
+    background: #000;
+}
+
+.forgot {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background: #111;
+    color: #aaa;
+    padding: 60px 0 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-logo {
+    color: #fff;
+}
+
+.footer-col h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-col a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+.social-icons span {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    color: #aaa;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+
+  .header-container {
+    padding: 10px 16px;
+  }
+
+  .logo {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .nav-menu {
+    display: none; 
+  }
+
+  .header-icons .icon {
+    margin-left: 10px;
+  }
+
+  .header__search input {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .auth-wrapper {
+    margin: 90px auto 60px;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .auth-wrapper h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .auth-tabs .tab {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+
+  .auth-form label {
+    font-size: 12px;
+  }
+
+  .auth-form input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 11px;
+  }
+
+  .forgot {
+    font-size: 12px;
+  }
+
+  .footer {
+    padding: 40px 16px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-col h3 {
+    font-size: 15px;
+  }
+
+  .footer-col a {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-bottom a {
+    margin-left: 0;
+  }
+}

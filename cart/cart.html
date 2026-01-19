@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart</title>'
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">E-commerce.</div>
+
+            <nav class="nav-menu">
+                <a href="../index.html" class="active">TRANG CHỦ</a>
+                <a href="../shop/shop.html">CỬA HÀNG</a>
+            </nav>
+
+            <div class="header-icons">
+                <a href="../cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="../wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="cart-page">
+    <h1 class="title">Giỏ hàng</h1>
+
+    <div class="cart-layout">
+        <div id="cartItems" class="cart-items"></div>
+        <div class="summary">
+            <h2>Tóm tắt đơn hàng</h2>
+            <div class="row">
+                <span>Tạm tính</span>
+                <span id="subtotal">0 ₫</span>
+            </div>
+            <div class="row">
+                <span>Phí vận chuyển</span>
+                <span>Tính khi thanh toán</span>
+            </div>
+            <div class="row total">
+                <span>Tổng cộng</span>
+                <span id="total">0 ₫</span>
+            </div>
+            <button id="checkout" onclick="window.location.href='../checkout/checkout.html'">Thanh toán </button>
+        </div>
+    </div>
+</main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h2 class="footer-logo">LUXE.</h2>
+                <p>Định nghĩa lại sự sang trọng hiện đại thông qua thiết kế tối giản và tay nghề thủ công đặc biệt.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Mua sắm</h3>
+                <a href="#">Hàng mới về</a>
+                <a href="#">Áo</a>
+                <a href="#">Quần</a>
+                <a href="#">Phụ kiện</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Trợ giúp</h3>
+                <a href="#">Giao hàng & Trả hàng</a>
+                <a href="#">Hướng dẫn chọn size</a>
+                <a href="#">Câu hỏi thường gặp</a>
+                <a href="#">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kết nối</h3>
+                <div class="social-icons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>Đăng ký nhận bản tin của chúng tôi để nhận các ưu đãi độc quyền.</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 LUXE. Bảo lưu mọi quyền.</p>
+            <div>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản dịch vụ</a>
+            </div>
+        </div>
+
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
