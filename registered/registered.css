@@ -1,200 +1,239 @@
 /*HEADER*/
 .header {
-    width: 100%;
-    background: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
+.logo a {
+  text-decoration: none;
+  color: #000;
+}
+
+
 .nav-menu {
-    display: flex;
-    gap: 32px;
+  display: flex;
+  gap: 32px;
 }
 
 .nav-menu a {
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: #777;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #777;
 }
 
 .nav-menu a.active {
   color: #000;
 }
+
 .header-icons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .header-icons i {
-    font-size: 16px;
-    color: #000;
+  font-size: 16px;
+  color: #000;
+}
+
+
+.header-search-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 999;
+}
+
+.header-search-wrapper.active {
+  display: block;
+}
+
+.header__search {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__search input {
+  border: none;
+  width: 100%;
+  padding: 8px 34px;
+  outline: none;
+  font-size: 14px;
 }
 
 .auth-wrapper {
-    max-width: 380px;
-    width: 100%;
-    margin: 120px auto 80px; 
-    padding: 0 16px;
-    text-align: center;
+  max-width: 380px;
+  width: 100%;
+  margin: 120px auto 80px;
+  padding: 0 16px;
+  text-align: center;
 }
 
 .auth-wrapper h1 {
-    font-size: 26px;
-    margin-bottom: 24px;
-    font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 24px;
+  font-weight: 600;
 }
 
 .auth-tabs {
-    display: flex;
-    background: #f2f2f2;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 26px;
+  display: flex;
+  background: #f2f2f2;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 26px;
 }
 
 .auth-tabs .tab {
-    flex: 1;
-    padding: 10px 0;
-    font-size: 14px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: #333;
-    text-decoration: none;
-    text-align: center;
+  flex: 1;
+  padding: 10px 0;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
 }
 
 .auth-tabs .tab.active {
-    background: #000;
-    color: #fff;
+  background: #000;
+  color: #fff;
 }
 
 .auth-form {
-    text-align: left;
+  text-align: left;
 }
 
 .auth-form label {
-    display: block;
-    font-size: 13px;
-    margin-bottom: 6px;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
 }
 
 .auth-form input {
-    width: 100%;
-    padding: 11px 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-    border-radius: 2px;
-    outline: none;
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  border-radius: 2px;
+  outline: none;
 }
 
 .auth-form input:focus {
-    border-color: #000;
+  border-color: #000;
 }
 
 #btnRegister {
-    width: 100%;
-    padding: 12px;
-    background: #111;
-    color: #fff;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-    margin-bottom: 14px;
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 14px;
 }
 
 #btnRegister:hover {
-    background: #000;
+  background: #000;
 }
 
 .forgot {
-    display: block;
-    text-align: center;
-    font-size: 13px;
-    color: #666;
-    text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
 }
 
 .forgot:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .footer {
-    background: #111;
-    color: #aaa;
-    padding: 60px 0 30px;
+  background: #111;
+  color: #aaa;
+  padding: 60px 0 30px;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
 }
 
 .footer-logo {
-    color: #fff;
+  color: #fff;
 }
 
 .footer-col h3 {
-    color: #fff;
-    margin-bottom: 15px;
+  color: #fff;
+  margin-bottom: 15px;
 }
 
 .footer-col a {
-    display: block;
-    color: #aaa;
-    text-decoration: none;
-    margin-bottom: 10px;
-    font-size: 14px;
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .footer-col a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .social-icons span {
-    display: inline-block;
-    background: #222;
-    color: #fff;
-    padding: 8px;
-    border-radius: 50%;
-    margin-right: 10px;
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .footer-bottom {
-    border-top: 1px solid #222;
-    margin-top: 40px;
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
+  max-width: 1200px;
+  margin: auto;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
 }
 
 .footer-bottom a {
-    color: #aaa;
-    margin-left: 20px;
-    text-decoration: none;
+  color: #aaa;
+  margin-left: 20px;
+  text-decoration: none;
 }
 
 @media (max-width: 700px) {
@@ -209,7 +248,7 @@
   }
 
   .nav-menu {
-    display: none; 
+    display: none;
   }
 
   .header-icons .icon {
@@ -287,4 +326,3 @@
     margin-left: 0;
   }
 }
-

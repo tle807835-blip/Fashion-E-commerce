@@ -17,6 +17,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 24px 16px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,6 +28,12 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+}
+
 
 .nav-menu {
     display: flex;
@@ -43,6 +50,7 @@
 .nav-menu a.active {
     color: #000;
 }
+
 .header-icons {
     display: flex;
     align-items: center;
@@ -55,9 +63,38 @@
 }
 
 
+.header-search-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 12px 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 999;
+}
+
+.header-search-wrapper.active {
+    display: block;
+}
+
+.header__search {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__search input {
+    border: none;
+    width: 100%;
+    padding: 8px 34px;
+    outline: none;
+    font-size: 14px;
+}
+
 .cart-page {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: auto;
     padding: 0 20px;
 }
 
@@ -72,6 +109,40 @@
     gap: 40px;
 }
 
+#cartItems:has(.empty-cart) {
+    grid-column: 1 / -1;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-cart p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-shop {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-shop:hover {
+    background: #444;
+}
+
 .cart-item {
     display: flex;
     align-items: center;
@@ -82,6 +153,10 @@
 .cart-item img {
     width: 90px;
     margin-right: 20px;
+}
+
+.summary {
+    display: none;
 }
 
 .cart-info {
@@ -203,8 +278,9 @@
 }
 
 .footer-bottom {
+    max-width: 1200px;
+    margin: auto;
     border-top: 1px solid #222;
-    margin-top: 40px;
     padding-top: 20px;
     display: flex;
     justify-content: space-between;

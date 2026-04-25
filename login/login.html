@@ -10,17 +10,25 @@
 <body>
     <header class="header">
         <div class="header-container">
-            <div class="logo">E-commerce.</div>
+            <div class="logo"><a href="../index.html">E-commerce.</a></div>
 
             <nav class="nav-menu">
                 <a href="../index.html" class="active">TRANG CHỦ</a>
-                <a href="../shop/shop.html">CỬA HÀNG</a>
+                <a href="../shop/shop.html" class="active">CỬA HÀNG</a>
             </nav>
 
             <div class="header-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="../cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="../wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
                 <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+
+        <div class="header-search-wrapper">
+            <div class="header__search">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <div class="product__list"></div>
             </div>
         </div>
     </header>
@@ -96,5 +104,7 @@
 
 
     <script src="../js/user.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/search1.js"></script>
 </body>
 </html>

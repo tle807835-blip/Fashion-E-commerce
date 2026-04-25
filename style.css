@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+a{
+    transition: 0,5s;
+}
 
 /*HEADER*/
 .header {
@@ -29,6 +32,11 @@
   letter-spacing: 2px;
 }
 
+.logo a{
+    text-decoration: none;
+    color: #000;
+}
+
 .nav-menu {
   display: flex;
   gap: 32px;
@@ -42,7 +50,7 @@
 }
 
 .nav-menu a.active {
-  color: #000;
+  color: #000000;
 }
 .header-icons {
   display: flex;
@@ -270,8 +278,9 @@
 }
 
 .footer-bottom {
+    max-width: 1200px;
+    margin: auto;
     border-top: 1px solid #222;
-    margin-top: 40px;
     padding-top: 20px;
     display: flex;
     justify-content: space-between;

@@ -10,28 +10,35 @@
 <body>
     <header class="header">
         <div class="header-container">
-            <div class="logo">E-commerce.</div>
+            <div class="logo"><a href="../index.html">E-commerce.</a></div>
 
             <nav class="nav-menu">
-                <a href="../index.html" class="active">TRANG CHỦ</a>
-                <a href="../shop/shop.html">CỬA HÀNG</a>
+                <a href="../index.html" >TRANG CHỦ</a>
+                <a href="../shop/shop.html" class="active">CỬA HÀNG</a>
             </nav>
 
             <div class="header-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="../cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="../wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
                 <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
             </div>
         </div>
 
+        <div class="header-search-wrapper">
+            <div class="header__search">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <div class="product__list"></div>
+            </div>
+        </div>
     </header>
 
     <main class="cart-page">
     <h1 class="title">Giỏ hàng</h1>
 
     <div class="cart-layout">
-        <div id="cartItems" class="cart-items"></div>
-        <div class="summary">
+        <div id="cartItems"></div>
+        <div class="summary"  id="summaryBox">
             <h2>Tóm tắt đơn hàng</h2>
             <div class="row">
                 <span>Tạm tính</span>
@@ -96,5 +103,7 @@
 
     </footer>
     <script src="cart.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/search1.js"></script>
 </body>
 </html>

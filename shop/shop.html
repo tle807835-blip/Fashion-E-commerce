@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,31 @@
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header-container">
-            <div class="logo">E-commerce.</div>
+            <div class="logo"><a href="../index.html">E-commerce.</a></div>
 
             <nav class="nav-menu">
-                <a href="../index.html" class="active">TRANG CHỦ</a>
-                <a href="../shop/shop.html">CỬA HÀNG</a>
+                <a href="../index.html" >TRANG CHỦ</a>
+                <a href="../shop/shop.html" class="active">CỬA HÀNG</a>
             </nav>
 
             <div class="header-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="../cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="../wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
                 <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
             </div>
         </div>
 
+        <div class="header-search-wrapper">
+            <div class="header__search">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <div class="product__list"></div>
+            </div>
+        </div>
     </header>
 
 
@@ -40,7 +49,7 @@
             <label><input type="radio" name="price" value="duoi200"> Dưới 200.000đ</label>
             <label><input type="radio" name="price" value="200-500"> 200.000đ - 500.000đ</label>
             <label><input type="radio" name="price" value="tren500"> Trên 500.000đ</label>
-            
+
             <h4>Màu sắc</h4>
             <label><input type="checkbox" name="color" value="white"> Trắng</label>
             <label><input type="checkbox" name="color" value="black"> Đen</label>
@@ -109,5 +118,8 @@
     </footer>
 
     <script src="shop.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/search1.js"></script>
 </body>
+
 </html>

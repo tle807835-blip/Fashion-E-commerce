@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+=======
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+>>>>>>> c927542 (first commit)
     <title>Chi tiết sản phẩm</title>
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header-container">
-            <div class="logo">E-commerce.</div>
+            <div class="logo"><a href="../index.html">E-commerce.</a></div>
 
             <nav class="nav-menu">
-                <a href="../index.html" class="active">TRANG CHỦ</a>
-                <a href="../shop/shop.html">CỬA HÀNG</a>
+                <a href="../index.html">TRANG CHỦ</a>
+                <a href="../shop/shop.html" class="active">CỬA HÀNG</a>
             </nav>
 
             <div class="header-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="../cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="../wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
                 <a href="../login/login.html"><i class="fa-regular fa-user"></i></a>
             </div>
         </div>
 
+        <div class="header-search-wrapper">
+            <div class="header__search">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <div class="product__list"></div>
+            </div>
+        </div>
     </header>
 
     <setion class="product">
@@ -36,8 +49,8 @@
                 </div>
 
                 <div class="product__card">
-                    <h2 id="product-title"  class="product__title"></h2>
-                    <p id="product-subtitle"  class="subtitle"></p>
+                    <h2 id="product-title" class="product__title"></h2>
+                    <p id="product-subtitle" class="subtitle"></p>
 
                     <div class="price__setion">
                         <div id="product-price" class="price"></div>
@@ -47,7 +60,7 @@
                     <div class="size__section">
                         <div class="size__header">
                             <span>Chọn size</span>
-                            <a href="#" class="size__guide" onclick="openSizeGuide()">
+                            <a href="#" class="size__guide" onclick="event.preventDefault(); openSizeGuide()">
                                 <i class="fa-solid fa-ruler"></i> Hướng dẫn chọn size
                             </a>
                         </div>
@@ -63,37 +76,34 @@
                         <div class="color__header">
                             <span>MÀU SẮC: <b id="selected-color-text">TRẮNG</b></span>
                         </div>
-                    
+
                         <div class="color__list">
                             <button class="color-item active" data-color="Trắng" style="background:#fff"></button>
                             <button class="color-item" data-color="Đen" style="background:#000"></button>
                             <button class="color-item" data-color="Nâu" style="background:rgb(65, 29, 29)"></button>
                         </div>
                     </div>
-                    
+
 
                     <div class="btn">
                         <button class="add-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng </button>
-                        <button 
-                            class="add-wishlist"
-                            data-id="1"
-                            data-name="Áo thun basic"
-                            data-price="199000"
-                            data-img="../img/A.jpg">
+                        <button class="add-wishlist" data-id="" data-name="" data-price="" data-img="">
                             <i class="fa-regular fa-heart"></i>
                         </button>
 
 
                     </div>
-                
+
                     <div class="section">
                         <h3>Tùy chọn thanh toán</h3>
                         <ul>
-                            <li><i style="color: #00b050;" class="fa-solid fa-circle-check"></i> MoMo, ZaloPay, Chuyển khoản</li>
-                            <li><i style="color: #00b050;" class="fa-solid fa-circle-check"></i> Thanh toán khi nhận hàng (COD)</li>
+                            <li><i style="color: #00b050;" class="fa-solid fa-circle-check"></i> MoMo, ZaloPay, Chuyển
+                                khoản</li>
+                            <li><i style="color: #00b050;" class="fa-solid fa-circle-check"></i> Thanh toán khi nhận
+                                hàng (COD)</li>
                         </ul>
                     </div>
-                
+
                     <div class="section">
                         <h3>Thông tin giao hàng</h3>
                         <ul>
@@ -106,6 +116,10 @@
         </div>
     </setion>
 
+    <div id="sizeGuideModal" class="size-modal">
+        <span class="close" onclick="closeSizeGuide()">&times;</span>
+        <img src="../img/SizeGiay.webp" alt="Size Guide">
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
@@ -158,6 +172,22 @@
 
     </footer>
 
+    <script>
+        const sizeModal = document.getElementById("sizeGuideModal");
+
+        function openSizeGuide() {
+            sizeModal.style.display = "flex";
+        }
+
+        sizeModal.addEventListener("click", function (e) {
+            if (e.target === sizeModal) {
+                sizeModal.style.display = "none";
+            }
+        });
+    </script>
     <script src="product.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/search1.js"></script>
 </body>
+
 </html>
