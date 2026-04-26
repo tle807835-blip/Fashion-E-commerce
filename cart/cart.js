@@ -3,15 +3,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartItemsEl = document.getElementById("cartItems");
     const subtotalEl = document.getElementById("subtotal");
     const totalEl = document.getElementById("total");
+    const summaryBox = document.getElementById("summaryBox");
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     if (cart.length === 0) {
-        cartItemsEl.innerHTML = "<p>Giỏ hàng trống</p>";
+        cartItemsEl.innerHTML = `
+        <div class="empty-cart">
+            <p>Giỏ hàng của bạn đang trống</p>
+            <a href="../shop/shop.html" class="btn-shop">Mua ngay</a>
+        </div>
+    `;
+
+        summaryBox.style.display = "none";
+
         subtotalEl.innerText = "0 đ";
         totalEl.innerText = "0 đ";
         return;
     }
+    summaryBox.style.display = "block";
 
     let subtotal = 0;
     cartItemsEl.innerHTML = "";
@@ -57,16 +67,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
 function changeQty(index, change) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     if (cart[index].quantity + change > 0) {
         cart[index].quantity += change;
         localStorage.setItem("cart", JSON.stringify(cart));
-        location.reload();
+        updateItemUI(index);
+        updateTotal();
     }
 }
 
+function updateItemUI(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const items = document.querySelectorAll(".cart-item");
+
+    const qtySpan = items[index].querySelector(".qty span");
+    const priceDiv = items[index].querySelector(".price");
+
+    qtySpan.innerText = cart[index].quantity;
+
+    priceDiv.innerText =
+        (cart[index].price * cart[index].quantity).toLocaleString("vi-VN") + " đ";
+}
 
 function removeItem(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];

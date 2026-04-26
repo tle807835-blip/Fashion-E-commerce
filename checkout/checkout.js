@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalEl = document.getElementById("total");
 
     if (cart.length === 0) {
-        alert("Giỏ hàng trống!");
+        showToast("Giỏ hàng trống!");
         window.location.href = "../cart/cart.html";
         return;
     }
@@ -41,12 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         for (let id of fields) {
             if (!document.getElementById(id).value.trim()) {
-                alert("Vui lòng nhập đầy đủ thông tin!");
+                showToast("Vui lòng nhập đầy đủ thông tin!","Hãy nhớ kiểm tra thông tin!");
                 return;
             }
         }
 
-        alert("Đặt hàng thành công!");
+        showToast("Đặt hàng thành công!","");
 
         localStorage.removeItem("cart");
         window.location.href = "../index.html";

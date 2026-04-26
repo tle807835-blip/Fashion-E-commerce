@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(".add-cart").addEventListener("click", () => {
         if (!selectedSize) {
-            alert("Vui lòng chọn size");
+            showToast("Vui lòng chọn size","Hãy lựa chọn size phù hợp vói bạn từ bảng hướng dẫn!");
             return;
         }
 
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        alert("Đã thêm vào giỏ hàng");
+        showToast("Đã thêm vào giỏ hàng", "Hãy vào giỏ hàng để thanh toán!");
     });
 
 });

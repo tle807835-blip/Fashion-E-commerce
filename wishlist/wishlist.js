@@ -2,7 +2,12 @@ const grid = document.querySelector(".wishlist-grid");
 const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
 if (wishlist.length === 0) {
-    grid.innerHTML = "<p>Chưa có sản phẩm yêu thích</p>";
+    grid.innerHTML = `
+        <div class="empty-wishlist">
+            <p>Chưa có sản phẩm yêu thích</p>
+            <a href="../shop/shop.html" class="btn-shop">Mua ngay</a>
+        </div>
+    `;
 } else {
     grid.innerHTML = wishlist.map(p => `
         <div class="wishlist-card" data-id="${p.id}">

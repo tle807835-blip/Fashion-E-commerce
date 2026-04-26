@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cửa Hàng</title>
-    <link rel="stylesheet" href="shop.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="taikhoan.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
 </head>
 
 <body>
+
     <header class="header">
         <div class="header-container">
             <div class="logo"><a href="../index.html">E-commerce.</a></div>
 
             <nav class="nav-menu">
-                <a href="../index.html" >TRANG CHỦ</a>
+                <a href="../index.html">TRANG CHỦ</a>
                 <a href="../shop/shop.html" class="active">CỬA HÀNG</a>
             </nav>
 
@@ -35,51 +37,52 @@
         </div>
     </header>
 
+    <div class="auth-wrapper">
+        <h1>Chào mừng trở lại.</h1>
 
-    <section class="container">
-
-        <aside class="filter">
-            <h2>Bộ Lọc</h2>
-            <h4>Danh mục</h4>
-            <label><input type="checkbox" name="category" value="tatca"> Tất cả</label>
-            <label><input type="checkbox" name="category" value="quanao"> Quần áo</label>
-            <label><input type="checkbox" name="category" value="phukien"> Phụ kiện</label>
-
-            <h4>Khoảng giá</h4>
-            <label><input type="radio" name="price" value="duoi200"> Dưới 200.000đ</label>
-            <label><input type="radio" name="price" value="200-500"> 200.000đ - 500.000đ</label>
-            <label><input type="radio" name="price" value="tren500"> Trên 500.000đ</label>
-
-            <h4>Màu sắc</h4>
-            <label><input type="checkbox" name="color" value="white"> Trắng</label>
-            <label><input type="checkbox" name="color" value="black"> Đen</label>
-            <label><input type="checkbox" name="color" value="brown"> Nâu</label>
-
-        </aside>
-
-        <div class="content">
-            <div class="top">
-                <h2>Cửa hàng</h2>
-            </div>
-
-            <div class="product-grid"> </div>
-            <div class="page"></div>
+        <div class="auth-tabs">
+            <button class="tab active" data-tab="login">Đăng nhập</button>
+            <button class="tab" data-tab="register">Đăng ký</button>
         </div>
-    </section>
 
+        <!-- LOGIN -->
+        <div class="auth-form login-form active">
+            <label>Email</label>
+            <input id="loginEmail" type="email" placeholder="john@example.com">
+
+            <label>Mật khẩu</label>
+            <input id="loginPassword" type="password" placeholder="••••••••">
+
+            <button id="btnLogin" class="btn-tk">Đăng nhập</button>
+            <a class="forgot">Quên mật khẩu?</a>
+        </div>
+
+        <!-- REGISTER -->
+        <div class="auth-form register-form">
+            <label>Họ và tên</label>
+            <input id="regName" type="text" placeholder="John Doe">
+
+            <label>Email</label>
+            <input id="regEmail" type="email" placeholder="john@example.com">
+
+            <label>Mật khẩu</label>
+            <input id="regPassword" type="password" placeholder="••••••••">
+
+            <button id="btnRegister" class="btn-tk">Tạo tài khoản</button>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
 
             <div class="footer-col">
                 <h2 class="footer-logo">LUXE.</h2>
-                <p>
-                    Định nghĩa lại sự sang trọng hiện đại thông qua thiết kế tối giản và tay nghề thủ công đặc biệt.
-                </p>
+                <p>Định nghĩa lại sự sang trọng hiện đại thông qua thiết kế tối giản và tay nghề thủ công đặc biệt.</p>
             </div>
 
             <div class="footer-col">
                 <h3>Mua sắm</h3>
+                <a href="#">Hàng mới về</a>
                 <a href="#">Áo</a>
                 <a href="#">Quần</a>
                 <a href="#">Phụ kiện</a>
@@ -116,10 +119,7 @@
         </div>
 
     </footer>
-
-    <script src="shop.js"></script>
-    <script src="../js/data.js"></script>
-    <script src="../js/search1.js"></script>
+    <script src="taikhoan.js"></script>
 </body>
 
 </html>

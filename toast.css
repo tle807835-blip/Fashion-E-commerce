@@ -1,0 +1,40 @@
+.cart-noti {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 6px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  min-width: 260px;
+  max-width: 320px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+
+  z-index: 9999;
+}
+
+.cart-noti.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cart-noti-content strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.cart-noti-content span {
+  font-size: 13px;
+  color: #555;
+}
