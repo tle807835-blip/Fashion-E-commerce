@@ -103,7 +103,12 @@
     margin-bottom: 10px;
 }
 
-
+.wishlist-empty{
+  width: 100%;
+  min-height: 300px;
+  font-size: 18px;
+  opacity: 0.6;
+}
 .wishlist-card {
     cursor: pointer;
 }
