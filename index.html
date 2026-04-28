@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion E-commerce</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <!-- HEADER -->
     <header class="header">
         <div class="header-container">
             <div class="logo"><a href="index.html">E-commerce.</a></div>
 
             <nav class="nav-menu">
                 <a href="index.html" class="active">TRANG CHỦ</a>
-                <a href="shop/shop.html">CỬA HÀNG</a>
+                <a href="html/shop.html">CỬA HÀNG</a>
             </nav>
 
             <div class="header-icons">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <a href="cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                <a href="TaiKhoan/taikhoan.html"><i class="fa-regular fa-user"></i></a>
+                <a href="html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="html/wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                <a href="html/taikhoan.html"><i class="fa-regular fa-user"></i></a>
             </div>
         </div>
 
@@ -33,35 +37,121 @@
         </div>
     </header>
 
+    <!-- BANNER -->
     <main>
         <section class="hero">
             <div class="hero-overlay"></div>
 
             <div class="hero-content">
                 <h1>Sự tối giản<br>Vượt thời gian.</h1>
-                <p>Những món đồ thiết yếu được nâng tầm cho cá nhân hiện đại.Khám phá bộ sưu tập streetwear cao cấp mới của chúng tôi.</p>
-                <a href="../shop/shop.html" class="hero-btn">Mua ngay</a>
+                <p>Những món đồ thiết yếu được nâng tầm cho cá nhân hiện đại.Khám phá bộ sưu tập streetwear cao cấp mới
+                    của chúng tôi.</p>
+                <a href="html/shop.html" class="hero-btn">Mua ngay</a>
             </div>
         </section>
+        <!-- GIỚI THIỆU -->
+        <section class="about-section">
+            <div class="about-left">
+                <span class="tag">TRIẾT LÝ THIẾT KẾ</span>
+                <h2>Tái định nghĩa sự sang trọng qua lăng kính đời thường</h2>
 
-        <div class="new-arrivals">
-            <div class="section-header">
-                <div>
-                    <h2>Hàng mới về</h2>
-                    <p>Những bổ sung mới nhất cho bộ sưu tập của chúng tôi.</p>
-                </div>
-                <a href="shop/shop.html" class="view-all">Xem tất cả</a>
+                <p>
+                    Được thành lập tại Hà Nội vào năm 2024, Fashion E-commerce. ra đời với niềm tin rằng thời trang cao
+                    cấp không nhất thiết phải ồn ào. Chúng tôi tạo ra những mảnh ghép tĩnh lặng nhưng sắc sảo cho tủ đồ
+                    của bạn.
+                </p>
+
+                <p>
+                    Bằng cách tập trung vào cấu trúc phom dáng, nguồn chất liệu bền bỉ và những chi tiết may đo được
+                    giấu kín một cách có chủ đích, mỗi thiết kế của Fashion E-commerce. là sự cân bằng giữa tính thẩm mỹ
+                    kiến trúc và sự thoải mái tuyệt đối trong mọi chuyển động.
+                </p>
+
             </div>
-      
-           <div class="product-grid" id="productGrid"></div>
 
-
-        </div>
-
+            <div class="about-right">
+                <img src="img/boutique.jpg" alt="#">
+                <div class="overlay-box">
+                    <h3>24</h3>
+                    <p>NĂM KINH NGHIỆM</p>
+                </div>
+            </div>
+        </section>
     </main>
 
 
+    <!-- SẢN PHẨM -->
+    <div class="new-arrivals">
+        <div class="section-header">
+            <div>
+                <h2>Những thiết kế làm nên nhịp điệu của mùa này</h2>
+                <p>Từ form dáng rộng thoải mái đến những món phụ kiện sắc sảo, mỗi lựa chọn đều giữ trọn tinh thần
+                    tối giản sang trọng đặc trưng của Fashion E-commerce.</p>
+            </div>
+            <a href="html/shop.html" class="view-all">X E M T Ấ T C Ả <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
 
+        <div class="product-grid" id="productGrid"></div>
+    </div>
+
+    <!-- DANH MỤC -->
+    <section class="category">
+        <h2>Tủ đồ được xây dựng bằng những mảnh ghép có chiều sâu</h2>
+
+        <div class="category-grid">
+            <div class="cat-item">
+                <span>DANH MỤC</span>
+                <h3>Quần áo</h3>
+                <p>Đường cắt tinh gọn cho nhịp sống thành thị.</p>
+            </div>
+
+            <div class="cat-item">
+                <span>DANH MỤC</span>
+                <h3>Phụ kiện</h3>
+                <p>Chi tiết hoàn thiện cho tổng thể tối giản.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÂU CHUYỆN -->
+    <section class="lux-section">
+        <div class="lux-img">
+            <img src="img/minimalist_fashion_m_370816fc.jpg" alt="#">
+        </div>
+
+        <div class="lux-content">
+            <span class="tag">CÂU CHUYỆN FASHION E-COMMERCE.</span>
+            <h2>Nghệ thuật của sự tinh tế nằm trong từng chi tiết nhỏ</h2>
+
+            <p>
+                Chúng tôi theo đuổi những thiết kế giữ được độ bền về cảm xúc lẫn hình thức: dễ mặc, dễ phối và đủ tinh xảo để đồng hành lâu dài trong tủ đồ của bạn.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>Chất liệu tuyển chọn</h4>
+                    <p>Cotton dày, len merino và da thật với bảng màu trung tính dễ phối.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-regular fa-star"></i>
+                    <h4>Phom dáng đương đại</h4>
+                    <p>Tỷ lệ rộng vừa phải, đường cắt sắc nét và cảm giác mặc thoải mái cả ngày.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h4>Giao nhanh tại Việt Nam</h4>
+                    <p>Đóng gói cao cấp, hỗ trợ đổi size thuận tiện và theo dõi đơn hàng rõ ràng.</p>
+                </div>
+            </div>
+
+            <button class="btn-main">KHÁM PHÁ BỘ SƯU TẬP</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
 
@@ -110,7 +200,8 @@
 
     </footer>
 
-    <script src="js/search.js"></script>
-    <script src="js/data.js"></script>
+    <script src="js/global/search.js"></script>
+    <script src="js/global/data.js"></script>
 </body>
+
 </html>

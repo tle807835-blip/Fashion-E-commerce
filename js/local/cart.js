@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cartItemsEl.innerHTML = `
         <div class="empty-cart">
             <p>Giỏ hàng của bạn đang trống</p>
-            <a href="../shop/shop.html" class="btn-shop">Mua ngay</a>
+            <a href="../html/shop.html" class="btn-shop">Mua ngay</a>
         </div>
     `;
 

@@ -3,7 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Cart</title>'
-  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="../css/wishlish.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
 
 </head>
@@ -14,14 +14,14 @@
 
             <nav class="nav-menu">
                 <a href="../index.html" >TRANG CHỦ</a>
-                <a href="../shop/shop.html" class="active">CỬA HÀNG</a>
+                <a href="../html/shop.html" class="active">CỬA HÀNG</a>
             </nav>
 
             <div class="header-icons">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <a href="../cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="../wishlist/wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                <a href="../TaiKhoan/taikhoan.html"><i class="fa-regular fa-user"></i></a>
+                <a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="../html/wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                <a href="../html/taikhoan.html"><i class="fa-regular fa-user"></i></a>
             </div>
         </div>
 
@@ -33,30 +33,10 @@
         </div>
     </header>
 
-    <main class="cart-page">
-    <h1 class="title">Giỏ hàng</h1>
-
-    <div class="cart-layout">
-        <div id="cartItems"></div>
-        <div class="summary"  id="summaryBox">
-            <h2>Tóm tắt đơn hàng</h2>
-            <div class="row">
-                <span>Tạm tính</span>
-                <span id="subtotal">0 ₫</span>
-            </div>
-            <div class="row">
-                <span>Phí vận chuyển</span>
-                <span>Tính khi thanh toán</span>
-            </div>
-            <div class="row total">
-                <span>Tổng cộng</span>
-                <span id="total">0 ₫</span>
-            </div>
-            <button id="checkout" onclick="window.location.href='../checkout/checkout.html'">Thanh toán </button>
-        </div>
+    <div class="container">
+        <h1 class="wishlist-title">Danh sách yêu thích</h1>
+        <div class="wishlist-grid"></div>
     </div>
-</main>
-
     <footer class="footer">
         <div class="footer-container">
 
@@ -88,7 +68,9 @@
                     <span><i class="fa-brands fa-facebook-f"></i></span>
                     <span><i class="fa-brands fa-twitter"></i></span>
                 </div>
-                <p>Đăng ký nhận bản tin của chúng tôi để nhận các ưu đãi độc quyền.</p>
+                <p>
+                    Đăng ký nhận bản tin của chúng tôi để nhận các ưu đãi độc quyền.
+                </p>
             </div>
 
         </div>
@@ -102,8 +84,8 @@
         </div>
 
     </footer>
-    <script src="cart.js"></script>
-    <script src="../js/data.js"></script>
-    <script src="../js/search1.js"></script>
+    <script src="../js/local/wishlist.js"></script>
+    <script src="../js/global/data.js"></script>
+    <script src="../js/global/search1.js"></script>
 </body>
 </html>

@@ -111,6 +111,95 @@ document.addEventListener("DOMContentLoaded", () => {
             color: "brown",
             img: "../img/vongco.webp",
             desc: "Vòng cổ máy ảnh phim màu nâu cổ điển Ahellogirl Phong cách thu đông mới"
+        },
+        {
+            id: 13,
+            name: "Vest Gile",
+            category: "quanao",
+            price: 199000,
+            color: "brown",
+            img: "../img/qa3.webp",
+            desc: "Sét Vest Gile Áo Kèm Quần Phong Cách Hiện Đại Trẻ Trung"
+        },
+        {
+            id: 14,
+            name: "Áo Jacket",
+            category: "quanao",
+            price: 129000,
+            color: "black",
+            img: "../img/qa1.webp",
+            desc: "Áo Jacket MM PHỐI TAY DA màu"
+        },
+        {
+            id: 15,
+            name: "Tất Cổ Ngắn",
+            category: "phukien",
+            price: 35000,
+            color: "black",
+            img: "../img/pk1.webp",
+            desc: "Tất cổ ngắn nữ nam chất vải cotton mềm mịn, vớ nữ basic unisex"
+        },
+        {
+            id: 16,
+            name: "Áo Thun Unisex",
+            category: "quanao",
+            price: 100000,
+            color: "black",
+            img: "../img/qa1.webp",
+            desc: "Áo thun phông nữ nam 3158 unisex nam nữ form rộng oversize"
+        },{
+            id: 17,
+            name: "Quần Ống Loe",
+            category: "quanao",
+            price: 143000,
+            color: "brown",
+            img: "../img/qa4.webp",
+            desc: "Quần Ống Loe Gân Mông Mấu Mới Hót Thu Đông 2026 Vải Nỉ Da Cá Dày Dặn"
+        },
+        {
+            id: 18,
+            name: "Kẹp Tóc",
+            category: "phukien",
+            price: 30000,
+            color: "brown",
+            img: "../img/pk2.webp",
+            desc: "Kẹp Tóc Càng Cua 13CM Nhám Đơn Giản Thời Trang Chất Lượng Cao Cho Nữ"
+        },
+        {
+            id: 19,
+            name: "Chân váy Kaki Nhật",
+            category: "quanao",
+            price: 129000,
+            color: "black",
+            img: "../img/qa5.webp",
+            desc: "Chân váy Kaki Nhật L1 chữ A Công sở cạp"
+        },
+        {
+            id: 20,
+            name: "Thắt Lưng Nữ",
+            category: "phukien",
+            price: 670000,
+            color: "black",
+            img: "../img/pk3.webp",
+            desc: "Thắt Lưng Nữ Khóa Chốt Vuông Phong Cách Retro"
+        },
+        {
+            id: 21,
+            name: "Áo Polo",
+            category: "quanao",
+            price: 179000,
+            color: "white",
+            img: "../img/qa6.webp",
+            desc: "Áo Polo Nam Nữ Thêu ESSEFAUST Unisex - Áo Cổ Bẻ Tay Lỡ"
+        },
+        {
+            id: 22,
+            name: "Áo Sơ Mi",
+            category: "quanao",
+            price: 150000,
+            color: "black",
+            img: "../img/qa7.webp",
+            desc: "Áo sơ mi dài tay Giấu Nút HAU FASHION"
         }
     ];
 
@@ -215,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const product = products.find(p => p.id == id);
 
                 localStorage.setItem("selectedProduct", JSON.stringify(product));
-                window.location.href = "../product/product.html";
+                window.location.href = "../html/product.html";
             });
         });
     }

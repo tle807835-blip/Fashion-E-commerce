@@ -1,6 +1,6 @@
 function showToast(title, desc) {
   const old = document.querySelector(".cart-noti");
-  if (old) old.remove(); // tránh trùng
+  if (old) old.remove(); 
 
   const noti = document.createElement("div");
   noti.className = "cart-noti";

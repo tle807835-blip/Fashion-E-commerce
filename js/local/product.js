@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const product = JSON.parse(localStorage.getItem("selectedProduct"));
     if (!product) {
-        window.location.href = "../shop/shop.html";
+        window.location.href = "../html/shop.html";
         return;
     }
 

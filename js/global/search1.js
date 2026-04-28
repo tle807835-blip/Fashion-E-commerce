@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     })
                 );
 
-                window.location.href = "product/product.html";
+                window.location.href = "../html/product.html";
             });
         });
     });

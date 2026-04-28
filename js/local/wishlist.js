@@ -5,7 +5,7 @@ if (wishlist.length === 0) {
     grid.innerHTML = `
         <div class="empty-wishlist">
             <p>Chưa có sản phẩm yêu thích</p>
-            <a href="../shop/shop.html" class="btn-shop">Mua ngay</a>
+            <a href="../html/shop.html" class="btn-shop">Mua ngay</a>
         </div>
     `;
 } else {
@@ -33,5 +33,5 @@ grid.addEventListener("click", e => {
     const product = wishlist.find(p => p.id == id);
 
     localStorage.setItem("selectedProduct", JSON.stringify(product));
-    window.location.href = "../product/product.html";
+    window.location.href = "../html/product.html";
 });
