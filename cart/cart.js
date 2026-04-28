@@ -1,26 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+function renderCart() {
     const cartItemsEl = document.getElementById("cartItems");
     const subtotalEl = document.getElementById("subtotal");
     const totalEl = document.getElementById("total");
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cartItemsEl.innerHTML = "";
 
     if (cart.length === 0) {
-        cartItemsEl.innerHTML = "<p>Giỏ hàng trống</p>";
+        cartItemsEl.innerHTML = "<h3 style=\"text-decoration: underline;\">Giỏ hàng trống</h3>";
         subtotalEl.innerText = "0 đ";
         totalEl.innerText = "0 đ";
         return;
     }
 
     let subtotal = 0;
-    cartItemsEl.innerHTML = "";
 
     cart.forEach((item, index) => {
         subtotal += item.price * item.quantity;
 
-        const div = document.createElement("div");
-        div.className = "cart-item";
+        const div = document.getElementById("cartItems")
 
         div.innerHTML = `
             <img src="${item.img}" alt="${item.name}">
@@ -34,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 </p>
 
                 <div class="qty">
-                    <button onclick="changeQty(${index}, -1)">−</button>
+                    <button data-index="${index}" data-change="-1">−</button>
                     <span>${item.quantity}</span>
-                    <button onclick="changeQty(${index}, 1)">+</button>
+                    <button data-index="${index}" data-change="1">+</button>
                 </div>
             </div>
 
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${(item.price * item.quantity).toLocaleString("vi-VN")} đ
             </div>
 
-            <div class="delete" onclick="removeItem(${index})">
+            <div class="delete" data-delete="${index}">
                 <i class="fa-solid fa-trash"></i>
             </div>
         `;
@@ -54,23 +53,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     subtotalEl.innerText = subtotal.toLocaleString("vi-VN") + " đ";
     totalEl.innerText = subtotal.toLocaleString("vi-VN") + " đ";
+}
+
+
+function setupEvents() {
+    const cartItemsEl = document.getElementById("cartItems");
+
+    cartItemsEl.addEventListener("click", function (e) {
+        
+        if (e.target.dataset.change) {
+            const index = e.target.dataset.index;
+            const change = parseInt(e.target.dataset.change);
+
+            if (cart[index].quantity + change > 0) {
+                cart[index].quantity += change;
+                localStorage.setItem("cart", JSON.stringify(cart));
+                renderCart();
+            }
+        }
+
+        
+        if (e.target.closest("[data-delete]")) {
+            const index = e.target.closest("[data-delete]").dataset.delete;
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        }
+    });
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderCart();
+    setupEvents();
 });
-
-
-function changeQty(index, change) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    if (cart[index].quantity + change > 0) {
-        cart[index].quantity += change;
-        localStorage.setItem("cart", JSON.stringify(cart));
-        location.reload();
-    }
-}
-
-
-function removeItem(index) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    location.reload();
-}
