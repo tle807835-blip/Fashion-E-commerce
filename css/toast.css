@@ -38,3 +38,31 @@
   font-size: 13px;
   color: #555;
 }
+
+@media (max-width: 768px) {
+
+  .cart-noti {
+    left: 50%;
+    right: auto;
+    bottom: 16px;
+
+    transform: translate(-50%, 20px);
+    width: calc(100% - 32px);
+    max-width: 100%;
+
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .cart-noti.show {
+    transform: translate(-50%, 0);
+  }
+
+  .cart-noti-content strong {
+    font-size: 13px;
+  }
+
+  .cart-noti-content span {
+    font-size: 12px;
+  }
+}

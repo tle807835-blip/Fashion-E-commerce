@@ -15,30 +15,30 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 2,
-            name: "Quần JOGGER",
-            category: "quan",
+            name: "Áo Sơ Mi Nam",
+            category: "ao",
             price: 520000,
             color: "white",
             img: "../img/quan.webp",
-            desc: "Quần JOGGER 3 LINE color unisex nam nữ"
+            desc: "Áo Sơ Mi Nam Ngắn Tay Phong Cách retro Nhật Bản Thời Trang Mới"
         },
         {
             id: 3,
-            name: "Áo khoác Nam JULIDO",
+            name: "Áo Thun Cổ Tròn",
             category: "ao",
             price: 890000,
             color: "brown",
             img: "../img/julido.webp",
-            desc: "Áo khoác Nam JULIDO Nam chất liệu gió hai lớp trượt nước cản gió cản bụi"
+            desc: "Áo Thun Cổ Tròn Lệch Vai Xoắn Eo Tôn Dáng Nhiều Màu Ulzzang"
         },
         {
             id: 4,
-            name: "Quần Ống Rộng",
+            name: "Quần Short Kaki Nữ",
             category: "quan",
             price: 650000,
             color: "wihte",
             img: "../img/quann.webp",
-            desc: "Quần ống rộng nam, nữ ống suông chất cotton dày dặn, quần dài ống rộng phong cách Hàn Quốc Ulzzang"
+            desc: "Quần Short Kaki Nữ, Quần Đùi Kaki Loại Đẹp Cạp Chun Co Giãn"
         },
         {
             id: 5,
@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 6,
-            name: "Áo Thun Nũ",
+            name: "Áo sơ mi ngắn tay",
             category: "ao",
             price: 120000,
             color: "brown",
             img: "../img/aon.webp",
-            desc: "FOCUS local brand Áo thun nữ bigsize Nâu vintage thời trang nữ tee 100%cotton"
+            desc: "Áo sơ mi tay ngắn nam dệt lưới đi biển cổ bẻ kiểu trẻ trung co giãn tốt, phong cách Hàn Quốc"
         },
         {
             id: 7,
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "ao",
             price: 100000,
             color: "black",
-            img: "../img/qa1.webp",
+            img: "../img/qa2.webp",
             desc: "Áo thun phông nữ nam 3158 unisex nam nữ form rộng oversize"
         }, {
             id: 10,
@@ -119,6 +119,24 @@ document.addEventListener("DOMContentLoaded", () => {
             color: "black",
             img: "../img/qa7.webp",
             desc: "Áo sơ mi dài tay Giấu Nút HAU FASHION"
+        },
+        {
+            id: 14,
+            name: "Váy Bí Dáng Phồng",
+            category: "ao",
+            price: 320000,
+            color: "black",
+            img: "../img/v1.webp",
+            desc: "Váy Bí Dáng Phồng Họa Tiết Hoa Nhí Bi Xinh Xắn Không Kèm Áo Trong Vintage Floral Bubble Dress"
+        },
+        {
+            id: 15,
+            name: "Quần Ống Rộng",
+            category: "quan",
+            price: 134000,
+            color: "brown",
+            img: "../img/qa8.webp",
+            desc: "Quần Ống Rộng Chiết Ly Đỉa To Dài 103cm Siêu Hack Dáng Quần Tây Ống Rộng"
         }
     ];
 
