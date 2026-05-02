@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         resultBox.innerHTML = match.map(p => `
             <div class="search-item" data-id="${p.id}"
-                 style="display:flex; gap:10px; padding:10px; cursor:pointer; padding-left:16%">
+                 style="display:flex; gap:10px; padding:10px; cursor:pointer; padding-left:19.8%">
                 <img src="${p.img}" 
                      style="width:45px; height:45px; border-radius:6px; object-fit:cover;">
                 <div>

@@ -1,26 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
+function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+}
 
+function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function renderCart() {
+    const cart = getCart();
     const cartItemsEl = document.getElementById("cartItems");
     const subtotalEl = document.getElementById("subtotal");
     const totalEl = document.getElementById("total");
     const summaryBox = document.getElementById("summaryBox");
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (!cartItemsEl || !subtotalEl || !totalEl || !summaryBox) return;
 
     if (cart.length === 0) {
         cartItemsEl.innerHTML = `
-        <div class="empty-cart">
+        <div class="empty-cart" style="margin-bottom:120px">
             <p>Giỏ hàng của bạn đang trống</p>
             <a href="../html/shop.html" class="btn-shop">Mua ngay</a>
         </div>
-    `;
-
+        
+        `;
         summaryBox.style.display = "none";
-
         subtotalEl.innerText = "0 đ";
         totalEl.innerText = "0 đ";
         return;
     }
+    else{
     summaryBox.style.display = "block";
 
     let subtotal = 0;
@@ -44,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 </p>
 
                 <div class="qty">
-                    <button onclick="changeQty(${index}, -1)">−</button>
+                    <button data-index="${index}" data-change="-1">−</button>
                     <span>${item.quantity}</span>
-                    <button onclick="changeQty(${index}, 1)">+</button>
+                    <button data-index="${index}" data-change="1">+</button>
                 </div>
             </div>
 
@@ -54,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${(item.price * item.quantity).toLocaleString("vi-VN")} đ
             </div>
 
-            <div class="delete" onclick="removeItem(${index})">
+            <div class="delete" data-index="${index}">
                 <i class="fa-solid fa-trash"></i>
             </div>
         `;
@@ -64,38 +72,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     subtotalEl.innerText = subtotal.toLocaleString("vi-VN") + " đ";
     totalEl.innerText = subtotal.toLocaleString("vi-VN") + " đ";
+}}
+document.addEventListener("click", (e) => {
+    // tăng / giảm số lượng
+    if (e.target.matches(".qty button")) {
+        const index = e.target.dataset.index;
+        const change = Number(e.target.dataset.change);
+        changeQty(index, change);
+    }
+
+    // xóa sản phẩm
+    if (e.target.closest(".delete")) {
+        const index = e.target.closest(".delete").dataset.index;
+        removeItem(index);
+    }
 });
-
-
-
 function changeQty(index, change) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = getCart();
 
     if (cart[index].quantity + change > 0) {
         cart[index].quantity += change;
-        localStorage.setItem("cart", JSON.stringify(cart));
-        updateItemUI(index);
-        updateTotal();
+        saveCart(cart);
+        renderCart(); 
     }
 }
-
-function updateItemUI(index) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    const items = document.querySelectorAll(".cart-item");
-
-    const qtySpan = items[index].querySelector(".qty span");
-    const priceDiv = items[index].querySelector(".price");
-
-    qtySpan.innerText = cart[index].quantity;
-
-    priceDiv.innerText =
-        (cart[index].price * cart[index].quantity).toLocaleString("vi-VN") + " đ";
-}
-
 function removeItem(index) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = getCart();
     cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    location.reload();
+    saveCart(cart);
+    renderCart(); 
 }
+document.addEventListener("DOMContentLoaded", () => {
+    renderCart();
+});

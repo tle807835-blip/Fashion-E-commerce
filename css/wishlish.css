@@ -116,7 +116,7 @@
   max-width: 1200px;
   width: 100%;
   padding: 0 16px;
-  margin: 0 auto;
+  margin-left: 17%;
 }
 
 .header__search input {
@@ -253,6 +253,7 @@
 
 .wishlist-card {
   cursor: pointer;
+  margin-bottom: 15px;
 }
 
 .wishlist-img {
@@ -365,6 +366,14 @@
 
   .header-icons #menu {
     display: block;
+  }
+
+  .header__search {
+    margin-left: -6%;
+  }
+
+  .search-item {
+    margin-left: -14%;
   }
 
   /* DANH SÁCH YÊU THÍCH */

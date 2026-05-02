@@ -92,7 +92,7 @@
     color: #000;
 }
 
-.header-icons #menu{
+.header-icons #menu {
     display: none;
 }
 
@@ -116,7 +116,7 @@
     max-width: 1200px;
     width: 100%;
     padding: 0 16px;
-    margin: 0 auto;
+    margin-left: 17%;
 }
 
 .header__search input {
@@ -255,22 +255,6 @@
 .hero-btn:hover {
     background: #000;
     color: #fff;
-}
-
-.nav-menu {
-    display: none;
-}
-
-.menu-toggle {
-    display: block;
-}
-
-.header-container {
-    padding: 12px 16px;
-}
-
-.logo {
-    font-size: 20px;
 }
 
 /* GIỚI THIỆU */
@@ -674,6 +658,14 @@
     
     .header-icons #menu{
         display: block;
+    }
+    
+    .header__search{
+        margin-left: -6%;
+    }
+
+    .search-item{
+        margin-left: -14%;
     }
     /* BANNER */
     .hero {
