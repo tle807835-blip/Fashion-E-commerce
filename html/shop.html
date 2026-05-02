@@ -10,12 +10,13 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="header">
         <div class="header-container">
             <div class="logo"><a href="../index.html">E-commerce.</a></div>
 
             <nav class="nav-menu">
-                <a href="../index.html" >TRANG CHỦ</a>
+                <a href="../index.html">TRANG CHỦ</a>
                 <a href="../html/shop.html" class="active">CỬA HÀNG</a>
             </nav>
 
@@ -23,7 +24,8 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="../html/wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                <a href="../html/taikhoan.html"><i class="fa-regular fa-user"></i></a>
+                <a href="../html/taikhoan.html" class="user"><i class="fa-regular fa-user"></i></a>
+                <i class="fa-solid fa-bars menu-toggle" id="menu"></i>
             </div>
         </div>
 
@@ -35,37 +37,59 @@
         </div>
     </header>
 
+    <!-- MENU KHI RESPONSIVE -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
 
-    <section class="container">
-
-        <aside class="filter">
-            <h2>Bộ Lọc</h2>
-            <h4>Danh mục</h4>
-            <label><input type="checkbox" name="category" value="tatca"> Tất cả</label>
-            <label><input type="checkbox" name="category" value="ao"> Áo, Váy</label>
-            <label><input type="checkbox" name="category" value="quan"> Quần, Chân Váy</label>
-
-            <h4>Khoảng giá</h4>
-            <label><input type="radio" name="price" value="duoi200"> Dưới 200.000đ</label>
-            <label><input type="radio" name="price" value="200-500"> 200.000đ - 500.000đ</label>
-            <label><input type="radio" name="price" value="tren500"> Trên 500.000đ</label>
-
-            <h4>Màu sắc</h4>
-            <label><input type="checkbox" name="color" value="white"> Trắng</label>
-            <label><input type="checkbox" name="color" value="black"> Đen</label>
-            <label><input type="checkbox" name="color" value="brown"> Nâu</label>
-
-        </aside>
-
-        <div class="content">
-            <div class="top">
-                <h2>Cửa hàng</h2>
+            <div class="mobile-header">
+                <h1>Fashion E-commerce.</h1>
+                <span class="close-menu">&times;</span>
             </div>
 
-            <div class="product-grid"> </div>
-            <div class="page"></div>
+            <p class="desc">
+                Những thiết kế tối giản với chất cảm sắc nét, dành cho nhịp sống hiện đại.
+            </p>
+
+            <a href="../index.html">Trang chủ</a>
+            <a href="../html/shop.html">Cửa hàng</a>
+            <a href="../html/taikhoan.html">Tài khoản</a>
+
         </div>
-    </section>
+    </div>
+
+    <!-- SẢN PHẨM + BỘC LỌC -->
+    <div class="container">
+        <div class="product-container">
+            <!-- BỘ LỌC -->
+            <aside class="filter">
+                <h2>Bộ Lọc</h2>
+                <h4>Danh mục</h4>
+                <label><input type="checkbox" name="category" value="tatca"> Tất cả</label>
+                <label><input type="checkbox" name="category" value="ao"> Áo, Váy</label>
+                <label><input type="checkbox" name="category" value="quan"> Quần, Chân Váy</label>
+
+                <h4>Khoảng giá</h4>
+                <label><input type="radio" name="price" value="duoi200"> Dưới 200.000đ</label>
+                <label><input type="radio" name="price" value="200-500"> 200.000đ - 500.000đ</label>
+                <label><input type="radio" name="price" value="tren500"> Trên 500.000đ</label>
+
+                <h4>Màu sắc</h4>
+                <label><input type="checkbox" name="color" value="white"> Trắng</label>
+                <label><input type="checkbox" name="color" value="black"> Đen</label>
+                <label><input type="checkbox" name="color" value="brown"> Nâu</label>
+            </aside>
+
+            <!-- SẢN PHẨM -->
+            <div class="content">
+                <div class="top">
+                    <h2>Cửa hàng</h2>
+                </div>
+
+                <div class="product-grid"> </div>
+                <div class="page"></div>
+            </div>
+        </div>
+    </div>
 
 
     <footer class="footer">
@@ -119,6 +143,8 @@
     <script src="../js/local/shop.js"></script>
     <script src="../js/global/data.js"></script>
     <script src="../js/global/search1.js"></script>
+    <script src="../js/global/menu.js"></script>
+
 </body>
 
 </html>

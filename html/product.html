@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi tiết sản phẩm</title>
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/toast.css">
@@ -10,12 +11,13 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="header">
         <div class="header-container">
             <div class="logo"><a href="../index.html">E-commerce.</a></div>
 
             <nav class="nav-menu">
-                <a href="../index.html" >TRANG CHỦ</a>
+                <a href="../index.html">TRANG CHỦ</a>
                 <a href="../html/shop.html" class="active">CỬA HÀNG</a>
             </nav>
 
@@ -23,7 +25,8 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="../html/wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                <a href="../html/taikhoan.html"><i class="fa-regular fa-user"></i></a>
+                <a href="../html/taikhoan.html" class="user"><i class="fa-regular fa-user"></i></a>
+                <i class="fa-solid fa-bars menu-toggle" id="menu"></i>
             </div>
         </div>
 
@@ -35,6 +38,27 @@
         </div>
     </header>
 
+    <!-- MENU KHI RESPONSIVE -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+
+            <div class="mobile-header">
+                <h1>Fashion E-commerce.</h1>
+                <span class="close-menu">&times;</span>
+            </div>
+
+            <p class="desc">
+                Những thiết kế tối giản với chất cảm sắc nét, dành cho nhịp sống hiện đại.
+            </p>
+
+            <a href="../index.html">Trang chủ</a>
+            <a href="../html/shop.html">Cửa hàng</a>
+            <a href="../html/taikhoan.html">Tài khoản</a>
+
+        </div>
+    </div>
+
+    <!-- PRODUCT -->
     <setion class="product">
         <div class="container">
             <div class="product__sp">
@@ -94,7 +118,8 @@
                     <div class="section">
                         <h3>Tùy chọn thanh toán</h3>
                         <ul>
-                            <li><i style="color: #00b050; margin: 8px 0;" class="fa-solid fa-circle-check"></i> MoMo, ZaloPay, Chuyển
+                            <li><i style="color: #00b050; margin: 8px 0;" class="fa-solid fa-circle-check"></i> MoMo,
+                                ZaloPay, Chuyển
                                 khoản</li>
                             <li><i style="color: #00b050;" class="fa-solid fa-circle-check"></i> Thanh toán khi nhận
                                 hàng (COD)</li>
@@ -113,14 +138,17 @@
         </div>
     </setion>
 
+    <!-- CÁC THÔNG BÁO -->
     <div id="toast"></div>
 
+    <!-- HƯỚNG DẪN CHỌN SIZE -->
     <div id="sizeGuideModal" class="size-modal">
         <div class="conduct">
             <img src="../img/SizeGiay.webp" alt="Size Guide" class="size__giay">
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
 
@@ -188,6 +216,8 @@
     <script src="../js/global/data.js"></script>
     <script src="../js/global/search1.js"></script>
     <script src="../js/global/toast.js"></script>
+    <script src="../js/global/menu.js"></script>
+
 </body>
 
 </html>

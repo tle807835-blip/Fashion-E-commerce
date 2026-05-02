@@ -1,5 +1,5 @@
 const menuBtn = document.querySelector(".menu-toggle");
-const mobileMenu = document.getElementById("mobileMenu");
+const mobileMenu = document.querySelector(".mobile-menu");
 const closeBtn = document.querySelector(".close-menu");
 
 menuBtn.onclick = () => {
@@ -10,7 +10,6 @@ closeBtn.onclick = () => {
     mobileMenu.classList.remove("active");
 };
 
-// click ra ngoài cũng đóng
 mobileMenu.onclick = (e) => {
     if (e.target === mobileMenu) {
         mobileMenu.classList.remove("active");
