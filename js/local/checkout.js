@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const nameRegex = /^[A-Za-zÀ-ỹ\s]{2,30}$/; 
-    const phoneRegex = /^(0|\+84)[0-9]{9}$/;   
+    const nameRegex = /^[A-Za-zÀ-ỹ\s]{2,20}$/; 
+    const phoneRegex = /^0[0-9]{9}$/;   
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const orderItems = document.getElementById("orderItems");
     const subtotalEl = document.getElementById("subtotal");
