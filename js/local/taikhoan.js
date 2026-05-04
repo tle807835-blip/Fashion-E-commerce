@@ -1,5 +1,5 @@
-const nameRegex = /^[A-Za-zÀ-ỹ\s]{2,30}$/; 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+const nameRegex = /^[A-Za-zÀ-ỹ\s]{2,20}$/; 
+const emailRegex = /^[a-zA-Z0-9]+@gmail\.com$/;
 const passwordRegex = /^.{6,}$/; 
 
 const tabs = document.querySelectorAll(".tab");
